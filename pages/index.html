@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Xrentals - Find your new place</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+  <!-- Connecting with CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="" alt="xrentals-logo">
+</head>
+<body>
+  <div class=""> 
+    <!-- Header / Navigation -->
+    <!-- <nav class="navbar">
+        <div class="logo">X <span>RENTALS</span></div>
+        <!-- Hamburger Icon --
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li class="dropdown">
+                <a href="#" class="toggle-dropdown">NEW LISTINGS ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="">VILLAS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="toggle-dropdown">LOCATION ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">KOFORIDUA</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="toggle-dropdown">PROPERTY ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">2 BEDROOMS</a></li>
+                </ul>
+            </li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </nav> -->
+  
+    
+    <nav class="navbar">
+      <img src = "" alt="Xrentals logo" class="logo-img">
+      <div class="logo">X <span>rentals</span></div>
+      <div class="nav-links">
+        <a href="index.html">&#127968; Home</a>
+        <a href="location.html">&#128205;Location</a>
+        <a href="property.html">&#127970; Property</a>
+        <a href="contact.html">&#128222; Contact</a>
+      </div>
+     <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location.href='pages/login.html'">Sign In</button>
+      </div>
+      <hr>
+    </nav> 
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">&#10024; Trusted by 10k+ renters</div>
+        <h1>The Easiest Method <br>To Find a House</h1>
+        <p>Discover your dream home with zero stress. Smart search, verified listings, and expert guidance all in one place.</p>
+        <button class="hero-cta" id="exploreBtn">Explore Properties <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-house-chimney"></i>
+        <i class="fas fa-map-location-dot"></i>
+        <div class="hero-tag">City Street · 123 Street</div>
+      </div>
+    </div>
+
+    <!-- Most Viewed Properties Section -->
+    <div class="section-header">
+      <span class="section-badge">&#128293; Hot picks</span>
+      <h2>Most Viewed</h2>
+    </div>
+    <div class="properties-grid" id="propertiesGrid">
+      <!-- make dynamic with JS -->
+    </div>
+
+    <!-- Work In 3 Steps Section -->
+    <div class="steps-section">
+      <div class="steps-header">
+        <span class="section-badge">simple process</span>
+        <h2>Our Work In 3 Steps</h2>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <h3>Research phase</h3>
+          <p>We analyze market trends, verify listings, and match you with the best neighborhoods.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Close the deal</h3>
+          <p>Transparent negotiation, digital paperwork, and full legal support.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-key"></i></div>
+          <h3>Key delivery</h3>
+          <p>Receive your keys, move-in guide, and welcome kit. Your new home awaits!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="footer-col">
+        <h4>Xrentals</h4>
+        <p>Finding Your New Home Is Simple</p>
+        <div class="app-badge">📱 Download our app</div>
+        <p class="b-2xl">&#169; All right reserved</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#">Most Viewed</a>
+        <a href="#">New Listings</a>
+        <a href="#">Villas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support &#127911</h4>
+        <a href="#">&#10067; FAQ</a>
+        <a href="#">&#128220; Terms</a>
+        <a href="#">&#128274; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Connecting with JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

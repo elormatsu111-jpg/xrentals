@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Locations — Xrentals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/location.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="logo">X <span>rentals</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="location.html" class="nav-active">Location</a>
+        <a href="property.html">Property</a>
+        <a href="contact.html">Contact</a>
+      </div>
+     <!-- <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location.href='login.html'">Sign In</button>
+      </div>-->
+    </nav>
+
+    <div class="page-hero">
+      <span class="section-badge">📍 Browse by area</span>
+      <h1>Find by Location</h1>
+      <p>Explore verified listings across Ghana's key cities and neighborhoods.</p>
+      <div class="search-bar">
+        <input type="text" id="locationSearch" placeholder="Search city or neighborhood…">
+        <button onclick="filterLocations()"><i class="fas fa-search"></i> Search</button>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-badge">🏙️ Popular areas</span>
+      <h2>Top Locations</h2>
+    </div>
+
+    <div class="locations-grid" id="locationsGrid"></div>
+
+    <footer class="footer">
+      <div class="footer-col">
+        <h4>Xrentals</h4>
+        <p>Finding Your New Home Is Simple</p>
+        <div class="app-badge">📱 Download our app</div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#">Most Viewed</a>
+        <a href="#">New Listings</a>
+        <a href="#">Villas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/location.js"></script>
+</body>
+</html>

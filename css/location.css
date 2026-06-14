@@ -1,0 +1,156 @@
+/* ==========================================================
+   location.css — Styles for location.html
+   Depends on: style.css (global) loaded before this file
+   ========================================================== */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  background: linear-gradient(115deg, #eaf3ee 0%, #ffffff 100%);
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0b2b26;
+  margin-bottom: 0.6rem;
+}
+
+.page-hero p {
+  color: #3c5e54;
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+/* ---- Search Bar ---- */
+.search-bar {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1.5px solid #d4e8de;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.9rem;
+  outline: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-bar button {
+  background: #2c7a4d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-bar button:hover {
+  background: #1f5e3a;
+}
+
+/* ---- Locations Grid ---- */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+/* ---- Location Card ---- */
+.location-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eef3ef;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 32px -10px rgba(0, 0, 0, 0.12);
+  border-color: #cde2d8;
+}
+
+.location-card-img {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  background: linear-gradient(145deg, #e1efea, #d0e2d9);
+  position: relative;
+}
+
+.listing-count {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  background: rgba(44, 122, 77, 0.88);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.location-card-body {
+  padding: 1.1rem 1rem;
+}
+
+.location-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a332c;
+  margin-bottom: 0.3rem;
+}
+
+.location-region {
+  font-size: 0.78rem;
+  color: #5b7c6e;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0.6rem;
+}
+
+.location-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.loc-tag {
+  font-size: 0.68rem;
+  background: #ecfdf3;
+  color: #166534;
+  padding: 3px 9px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* ---- No results message ---- */
+.no-results {
+  color: #5b7c6e;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}

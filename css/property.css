@@ -1,0 +1,199 @@
+/* ==========================================================
+   property.css — Styles for property.html
+   Depends on: style.css (global) loaded before this file
+   ========================================================== */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  background: linear-gradient(115deg, #eaf3ee 0%, #ffffff 100%);
+  border-radius: 2rem;
+  padding: 2rem 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0b2b26;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  color: #3c5e54;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ---- Filter Bar ---- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  background: white;
+  border-radius: 1.2rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef3ef;
+  align-items: center;
+}
+
+.filter-bar input,
+.filter-bar select {
+  border: 1.5px solid #dde8e3;
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  outline: none;
+  background: #f8fbf9;
+  color: #1a332c;
+  font-family: 'Inter', sans-serif;
+  transition: border 0.2s;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #2c7a4d;
+}
+
+.filter-bar input {
+  flex: 1;
+  min-width: 160px;
+}
+
+.filter-btn {
+  background: #2c7a4d;
+  color: white;
+  border: none;
+  padding: 0.55rem 1.3rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-btn:hover {
+  background: #1f5e3a;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1.5px solid #c9ddd6;
+  color: #5b7c6e;
+  padding: 0.5rem 1.1rem;
+  border-radius: 40px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  border-color: #2c7a4d;
+  color: #2c7a4d;
+}
+
+/* ---- Results Meta ---- */
+.results-meta {
+  font-size: 0.85rem;
+  color: #5b7c6e;
+  margin-bottom: 1rem;
+}
+
+.results-meta span {
+  font-weight: 700;
+  color: #1a332c;
+}
+
+/* ---- Card Meta Row (beds/baths/sqft) ---- */
+.card-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: #5b7c6e;
+}
+
+.card-meta i {
+  margin-right: 3px;
+}
+
+/* ---- Card Type + Heart Row ---- */
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.type-badge {
+  font-size: 0.7rem;
+  background: #ecfdf3;
+  color: #166534;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.heart-icon {
+  color: #aac7bb;
+  transition: color 0.2s, transform 0.2s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ---- WhatsApp Enquire Button ---- */
+.enquire-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #2c7a4d;
+  color: white;
+  border: none;
+  padding: 0.55rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.enquire-btn:hover {
+  background: #1f5e3a;
+}
+
+/* ---- Empty State ---- */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #5b7c6e;
+  grid-column: 1 / -1;
+}
+
+.empty-state i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+  display: block;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar input,
+  .filter-bar select,
+  .filter-btn,
+  .clear-btn {
+    width: 100%;
+  }
+}

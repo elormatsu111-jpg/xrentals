@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+
+
+
+            <div class="tab-container">
+
+                <a href="login.html">
+                    <button class="tab">
+                        LOGIN
+                    </button>
+                </a>
+
+                <button class="tab active">
+                    REGISTER
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+
+            <div class="logo-container">
+                <h2>Create Account</h2>
+                <p>Fill in your information below</p>
+            </div>
+
+            <form id="registerForm">
+
+                <!-- FIRST NAME -->
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="firstName"
+                        placeholder="First Name"
+                        required
+                    >
+                </div>
+
+                <!-- LAST NAME -->
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="lastName"
+                        placeholder="Last Name"
+                        required
+                    >
+                </div>
+
+                <!-- PHONE -->
+                <div class="input-group">
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+                </div>
+
+                <!-- EMAIL -->
+                <div class="input-group">
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required
+                    >
+                </div>
+
+                <!-- ACCOUNT TYPE -->
+                <div class="account-type">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="accountType"
+                            value="agent"
+                            required
+                        >
+                        Agent
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="accountType"
+                            value="buyer"
+                        >
+                        Buyer / Renter
+                    </label>
+
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="input-group password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <span onclick="togglePassword('password')">
+                        👁
+                    </span>
+
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="input-group password-box">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required
+                    >
+
+                    <span onclick="togglePassword('confirmPassword')">
+                        👁
+                    </span>
+
+                </div>
+
+                <!-- ERROR MESSAGE -->
+                <small id="errorMessage"></small>
+                <!-- REGISTER BUTTON -->
+                <button type="submit" class="login-btn">
+                    CREATE ACCOUNT
+                </button>
+
+            </form>
+
+            <div class="social-login">
+
+                <p>Or Continue With</p>
+
+                <div class="social-buttons">
+
+                    <button type="button" class="google-btn">
+                        Google
+                    </button>
+
+                    <button type="button" class="icloud-btn">
+                        icloud
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="register.js"></script>
+
+</body>
+</html>
