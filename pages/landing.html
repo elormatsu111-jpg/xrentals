@@ -9,56 +9,20 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/landing.css">
   <link rel="icon" type="image/x-icon" href="" alt="xrentals-logo">
 </head>
 <body>
   <div class=""> 
     <!-- Header / Navigation -->
     <nav class="navbar">
-        <div class="logo">X <span>RENTALS</span></div>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-        <ul class="nav-links" id="nav-links">
-            <li class="dropdown">
-                <a href="#" class="toggle-dropdown">NEW LISTINGS ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="">VILLAS</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="toggle-dropdown">LOCATION ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">KOFORIDUA</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="toggle-dropdown">PROPERTY ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">2 BEDROOMS</a></li>
-                </ul>
-            </li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Contact Us</a></li>
-        </ul>
-    </nav>
-  
-    <!--
-    <nav class="navbar">
       <img src = "" alt="Xrentals logo" class="logo-img">
-      <div class="logo">X <span>rentals</span></div>
-      <div class="nav-links">
-        <a href="index.html">&#127968; Home</a>
-        <a href="location.html">&#128205;Location</a>
-        <a href="property.html">&#127970; Property</a>
-        <a href="contact.html">&#128222; Contact</a>
-      </div>
+      <div class="logo">X<span>rentals</span></div>
      <div class="nav-actions">
         <button class="btn-outline" onclick="window.location.href='pages/login.html'">Sign In</button>
       </div>
       <hr>
     </nav>
-    -->
-
     <!-- Hero Section -->
     <div class="hero">
       <div class="hero-content">
@@ -130,57 +94,6 @@
       </div>
     </footer>
   </div>
-
-  <!-- Connecting with JavaScript -->
-  <script src="../js/script.js"></script>
 </body>
 
-<script>
-        // Toggle menu on mobile
-        const toggle = document.getElementById('menu-toggle');
-        const links = document.getElementById('nav-links');
-
-        toggle.addEventListener('click', () => {
-            links.classList.toggle('active');
-        });
-
-        // Handle mobile dropdown toggle on click
-        document.querySelectorAll('.toggle-dropdown').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent link jump
-                const dropdown = this.nextElementSibling;
-
-                // Close all other open dropdowns first (optional)
-                document.querySelectorAll('.dropdown-content').forEach(menu => {
-                    if (menu !== dropdown) menu.style.display = 'none';
-                });
-
-                // Toggle this one
-                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        // Close hamburger and dropdowns when clicking outside
-        document.addEventListener("click", function (e) {
-            const navLinks = document.getElementById("nav-links");
-            const menuToggle = document.getElementById("menu-toggle");
-            const isInsideMenu = navLinks.contains(e.target);
-            const isToggle = menuToggle.contains(e.target);
-
-            // Close hamburger menu if open and clicked outside
-            if (!isInsideMenu && !isToggle && navLinks.classList.contains("active")) {
-                navLinks.classList.remove("active");
-            }
-
-            // Close all dropdowns if clicked outside
-            document.querySelectorAll(".dropdown-content").forEach(drop => {
-                const trigger = drop.previousElementSibling;
-                if (!drop.contains(e.target) && !trigger.contains(e.target)) {
-                    drop.style.display = "none";
-                }
-            });
-        });
-
-    </script>
-    
 </html>
