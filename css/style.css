@@ -11,6 +11,7 @@ body {
   color: #1a2e28;
   line-height: 1.4;
   scroll-behavior: smooth;
+  padding: 2px;
 }
 
 .container {
@@ -381,10 +382,12 @@ h2:after {
 
 /* ========== PROPERTIES GRID ========== */
 .section-header {
-  margin: 2rem 0 1rem;
+  margin: 2rem 1rem;
+  padding: 12px;
 }
 
 .properties-grid {
+  padding: 12px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.8rem;
