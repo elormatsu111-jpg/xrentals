@@ -1,41 +1,33 @@
 <?php
+session_start();
+require_once 'db.php'; 
 
-require_once "../config/database.php";
+if (isset($_POST['login_btn'])) {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = $_POST['password'];
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+    $query = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-
-$result = $stmt->get_result();
-
-/*$sql =
-"SELECT * FROM users
-WHERE email='$email'";
-
-$result = mysqli_query($conn,$sql);*/
-
-if(mysqli_num_rows($result) > 0){
-
-    $user = mysqli_fetch_assoc($result);
-
-    if(
-        password_verify(
-            $password,
-            $user['password']
-        )
-    ){
-
-        echo "success";
-
-    }else{
-
-        echo "wrong_password";
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            
+            // Redirect to the main page inside the pages folder
+            header("Location: ../pages/index.html");
+            exit();
+        } else {
+            echo "Incorrect password.";
+        }
+    } else {
+        echo "No account found with that email address.";
     }
-
-}else{
-
-    echo "user_not_found";
+    $stmt->close();
 }
+?>
