@@ -183,6 +183,8 @@ body{
     font-size:15px;
 }
 
+
+
 .login-btn{
     width:180px;
     border:none;
@@ -198,6 +200,7 @@ body{
 
 .login-btn:hover{
     transform:translateY(-2px);
+    text-align: center;
 }
 
 /* ==========================

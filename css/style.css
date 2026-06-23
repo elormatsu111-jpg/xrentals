@@ -386,6 +386,10 @@ h2:after {
   padding: 12px;
 }
 
+.scection-header h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 .properties-grid {
   padding: 12px;
   display: grid;
