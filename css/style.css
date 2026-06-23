@@ -382,8 +382,13 @@ h2:after {
 /* ========== PROPERTIES GRID ========== */
 .section-header {
   margin: 2rem 0 1rem;
+  text-align: center;
 }
 
+.scection-header h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 .properties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

@@ -8,115 +8,52 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-
     <div class="container">
-
         <!-- LEFT PANEL -->
         <div class="left-panel">
-
             <div class="tab-container">
-
-                <button class="tab active">
-                    LOGIN
-                </button>
-
-                <button
-                    class="tab"
-                    onclick="window.location.href='register.html'"
-                >
-                    REGISTER
-                </button>
-
+                <button class="tab active">LOGIN</button>
+                <button class="tab" onclick="window.location.href='register.html'">REGISTER</button>
             </div>
-
         </div>
-
         <!-- RIGHT PANEL -->
         <div class="right-panel">
-
             <!-- LOGO -->
             <div class="logo-container">
                 <h1>LOGIN</h1>
             </div>
-
             <!-- LOGIN FORM -->
             <form id="loginForm" action="../php/login.php"method="POST">
-
                 <div class="input-group">
-                    <input
-                        type="email"
-                        id="email"
-                        name="username"
-                        placeholder="Email Address"
-                        required
-                    >
+                    <input type="email" id="email" name="username" placeholder="Email Address" required>
                 </div>
-
                 <div class="input-group password-box">
-
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Password"
-                        required
-                    >
-
-                    <span onclick="togglePassword('password')">
-                        👁
-                    </span>
-
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span onclick="togglePassword('password')">👁</span>
                 </div>
-
                 <div class="form-options">
-
                     <a href="#" class="forgot-password">
                         Forgot Password?
                     </a>
-
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
                 </div>
-
-                <button type="submit" 
-                name="login_btn"
-                class="login-btn">
-                    LOGIN
-                </button>
-
+                <button type="submit" name="login_btn" class="login-btn">LOGIN</button>
             </form>
-
             <div class="social-login">
-
                 <p>Or Login With</p>
-
                 <div class="social-buttons">
-
-                    <button
-                        type="button"
-                        class="google-btn"
-                    >
-                        Google
-                    </button>
-
-                    <button
-                        type="button"
-                        class="icloud-btn"
-                    >
-                        icloud
-                    </button>
-
+                    <button type="button" class="google-btn">Google</button>
+                    <button type="button" class="icloud-btn">icloud</button>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <script src="login.js"></script>
-
+    
 </body>
 </html>
