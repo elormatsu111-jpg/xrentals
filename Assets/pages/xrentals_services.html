@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Service Xrentals - Find your new place</Fieldset></title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                    theme: {
+                    extend: {
+                        "colors": {
+                            "surface-container": "#e5eeff",
+                            "secondary-fixed-dim": "#4edea3",
+                            "on-tertiary-container": "#aeb2b6",
+                            "background": "#f8f9ff",
+                            "secondary-container": "#6cf8bb",
+                            "on-primary-fixed": "#002117",
+                            "primary-fixed": "#b0f0d6",
+                            "error": "#ba1a1a",
+                            "surface-container-low": "#eff4ff",
+                            "surface-dim": "#cbdbf5",
+                            "on-secondary-fixed-variant": "#005236",
+                            "on-background": "#0b1c30",
+                            "surface": "#f8f9ff",
+                            "outline": "#707974",
+                            "on-tertiary": "#ffffff",
+                            "primary-container": "#064e3b",
+                            "secondary-fixed": "#6ffbbe",
+                            "on-primary-fixed-variant": "#0b513d",
+                            "surface-container-high": "#dce9ff",
+                            "secondary": "#006c49",
+                            "on-secondary-fixed": "#002113",
+                            "outline-variant": "#bfc9c3",
+                            "inverse-on-surface": "#eaf1ff",
+                            "on-surface-variant": "#404944",
+                            "on-error-container": "#93000a",
+                            "inverse-primary": "#95d3ba",
+                            "primary-fixed-dim": "#95d3ba",
+                            "on-surface": "#0b1c30",
+                            "on-secondary-container": "#00714d",
+                            "inverse-surface": "#213145",
+                            "error-container": "#ffdad6",
+                            "surface-variant": "#d3e4fe",
+                            "tertiary-fixed-dim": "#c3c7cb",
+                            "on-primary-container": "#80bea6",
+                            "tertiary-fixed": "#dfe3e7",
+                            "on-tertiary-fixed-variant": "#43474b",
+                            "on-primary": "#ffffff",
+                            "surface-bright": "#f8f9ff",
+                            "primary": "#003527",
+                            "surface-tint": "#2b6954",
+                            "on-error": "#ffffff",
+                            "tertiary": "#2a2f32",
+                            "surface-container-lowest": "#ffffff",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-fixed": "#171c1f",
+                            "surface-container-highest": "#d3e4fe",
+                            "tertiary-container": "#404548"
+                        },
+
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        
+                        "spacing": {
+                            "base": "4px",
+                            "md": "1.5rem",
+                            "margin-desktop": "80px",
+                            "max-width": "1280px",
+                            "lg": "2.5rem",
+                            "xs": "0.5rem",
+                            "gutter": "24px",
+                            "sm": "1rem",
+                            "xl": "4rem",
+                            "margin-mobile": "16px"
+                        },
+
+                        "fontFamily": {
+                            "headline-lg-mobile": ["Hanken Grotesk"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "label-sm": ["Hanken Grotesk"],
+                            "label-md": ["Hanken Grotesk"],
+                            "headline-md": ["Hanken Grotesk"],
+                            "headline-lg": ["Hanken Grotesk"],
+                            "display": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"]
+                        },
+
+                        "fontSize": {
+                            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                        }
+                    },
+                },
+            }
+        </script> 
+        
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+
+            .material-symbols-outlined.filled {
+                font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+
+            .luxury-card-hover:hover {
+                transform: translateY(-4px);
+                box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.05);
+            }
+
+            .no-scrollbar::-webkit-scrollbar { 
+                display: none; 
+            }
+
+            .no-scrollbar { 
+                -ms-overflow-style: none; 
+            }
+        </style>
+    </head>
+
+    <body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+        <header class="bg-surface/90 backdrop-blur-md font-body-md text-body-md docked full-width top-0 sticky border-b border-outline-variant z-50">
+            <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-50 bg-surface-container-low backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out">
+            <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+                <div class="font-headline-md text-headline-md font-bold text-primary"><span class="text-on text-3xl">X</span>rentals<p class="text-white-200 text-sm">Find Your New Place</p></div>
+                <div class="hidden md:flex items-center space-x-5 hover:text-on-primary transition-colors">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline hover:pb-1 transition-colors" href="#">Properties</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline hover:pb-1 transition-colors" href="#">Cities</a>
+                    <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors" href="#">Services</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline hover:pb-1 transition-colors" href="#">About Us</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline hover:pb-1 transition-colors" href="#">Contact Us</a>
+                </div>
+                <div class="flex gap-5">
+                    <a class="border border-primary text-primary px-2 py-2 rounded-lg font-label-2 hover:bg-primary-container hover:text-on-primary transition-colors" href="#">Log In</a>
+                    <a class="bg-primary-container text-on-primary px-2 py-2 rounded-lg font-label-2 hover:opacity-90 transition-all" href="#">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <main>
+            <!-- Hero Section -->
+            <section class="relative h-[819px] flex items-center justify-center text-center overflow-hidden">
+                <img class="absolute inset-0 z-0 w-full h-full object-cover" alt="A modern architectural house." src="../Images/about-0.png">
+                <div class="absolute inset-0 hero-gradient z-10"></div>
+                <div class="relative z-20 max-w-3xl px-margin-mobile md:px-0">
+                    <span class="text-on-primary font-label-md tracking-widest uppercase mb-sm block">Our Services</span>
+                    <h1 class="font-display text-display md:text-[64px] text-on-primary leading-tight mb-md">Our Expertise</h1>
+                    <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl mx-auto">Redefining luxury real estate services through architectural appreciation, market precision, and an unwavering commitment to our clients' legacies.</p>
+                    <div class="mt-lg flex justify-center gap-sm">
+                        <button class="bg-primary-container text-white px-lg py-md rounded font-label-md hover:opacity-90 transition-all">Schedule Consultation</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Services Grid -->
+            <section class="py-xl bg-surface-container-lowest">
+                <div class="max-w-max-width mx-auto px-gutter">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                        <!-- Residential Sales -->
+                        <div class="bg-white border border-outline-variant p-md flex flex-col items-start luxury-card-hover transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary-container flex items-center justify-center text-white rounded mb-md">
+                                <span class="material-symbols-outlined text-2xl">home_work</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Residential Sales</h3>
+                            <p class="text-on-surface-variant font-body-md mb-md">Curating extraordinary residences for discerning individuals, focusing on architectural significance and lifestyle alignment.</p>
+                            <a class="mt-auto text-primary font-label-md flex items-center group" href="#">Explore Properties <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+                        </div>
+                        <!-- Commercial Leasing -->
+                        <div class="bg-white border border-outline-variant p-md flex flex-col items-start luxury-card-hover transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary-container flex items-center justify-center text-white rounded mb-md">
+                                <span class="material-symbols-outlined text-2xl">domain</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Commercial Leasing</h3>
+                            <p class="text-on-surface-variant font-body-md mb-md">Strategic placement and advisory for high-end retail, office spaces, and boutique commercial developments.</p>
+                            <a class="mt-auto text-primary font-label-md flex items-center group" href="#">Explore Properties <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+                        </div>
+                        <!-- Property Management -->
+                        <div class="bg-white border border-outline-variant p-md flex flex-col items-start luxury-card-hover transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary-container flex items-center justify-center text-white rounded mb-md">
+                                <span class="material-symbols-outlined text-2xl">real_estate_agent</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Property Management</h3>
+                            <p class="text-on-surface-variant font-body-md mb-md">Institutional-grade asset preservation and white-glove management for high-value portfolios.</p>
+                            <a class="mt-auto text-primary font-label-md flex items-center group" href="#">Explore Properties <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+                        </div>
+                        <!-- Investment Advisory -->
+                        <div class="bg-white border border-outline-variant p-md flex flex-col items-start luxury-card-hover transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary-container flex items-center justify-center text-white rounded mb-md">
+                                <span class="material-symbols-outlined text-2xl">monitoring</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Investment Advisory</h3>
+                            <p class="text-on-surface-variant font-body-md mb-md">Data-driven intelligence and exclusive market access for residential and commercial investment strategies.</p>
+                            <a class="mt-auto text-primary font-label-md flex items-center group" href="#">Explore Properties <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why Choose Xrentals -->
+            <section class="py-xl bg-surface">
+                <div class="max-w-max-width mx-auto px-gutter">
+                    <div class="flex flex-col lg:flex-row items-center gap-xl">
+                        <div class="lg:w-1/2">
+                            <h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Why Xrentals</h2>
+                            <div class="space-y-md">
+                                <div class="flex gap-md">
+                                    <span class="material-symbols-outlined filled text-primary">public</span>
+                                    <div>
+                                        <h4 class="font-label-md text-label-md font-bold mb-1">Local Network</h4>
+                                        <p class="text-on-surface-variant">Connecting you to exclusive off-market properties and international buyers across 45 countries.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-md">
+                                    <span class="material-symbols-outlined filled text-primary">insights</span>
+                                    <div>
+                                        <h4 class="font-label-md text-label-md font-bold mb-1">Market Intelligence</h4>
+                                        <p class="text-on-surface-variant">Proprietary analytics and hyper-local insights that predict trends before they surface.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-md">
+                                    <span class="material-symbols-outlined filled text-primary">concierge</span>
+                                    <div>
+                                        <h4 class="font-label-md text-label-md font-bold mb-1">Personalized Concierge</h4>
+                                        <p class="text-on-surface-variant">A dedicated liaison for every aspect of your move, from legal coordination to interior curation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 w-full aspect-video rounded-xl overflow-hidden border border-outline-variant shadow-sm">
+                            <img class="w-full h-full object-cover" src="../Images/service-0.png" alt="A minimalist architectural interior."/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Case Studies Carousel -->
+            <section class="py-xl bg-surface-container-low overflow-hidden">
+                <div class="max-w-max-width mx-auto px-gutter mb-lg flex justify-between items-end">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Success Stories</h2>
+                        <p class="text-on-surface-variant font-body-md mt-xs">A selection of our most significant transactions.</p>
+                    </div>
+                    <div class="flex gap-xs">
+                        <button class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-primary-container hover:text-white transition-all rounded-full" id="prevBtn">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-primary-container hover:text-white transition-all rounded-full" id="nextBtn">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-gutter px-gutter overflow-x-auto no-scrollbar snap-x snap-mandatory" id="carousel">
+                    <!-- Stories 0 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../Images/service-1.png" alt="A collection of luxury heritage apartments."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Investment Advisory</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">The Heritage Portfolio</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Increased annual yield by 24% through strategic renovation and positioning.</p>
+                        </div>
+                    </div>
+                    <!-- Stories 1 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"src="../Images/service-2.png" alt="A modern luxury villa."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Residential Sales</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">The Obsidian Villa</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Sold for $8.5M in record time using our global outreach network.</p>
+                        </div>
+                    </div>
+                    <!-- Stories 2 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src=" ../Images/service-3.png" alt="A sleek corporate office building."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Commercial Leasing</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">Lumina Headquarters</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Negotiated a 15-year lease for a Fortune 500 tech firm in 45 days.</p>
+                        </div>
+                    </div>
+                    <!-- Stories 3 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../Images/service-1.png" alt="A collection of luxury heritage apartments."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Investment Advisory</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">The Heritage Portfolio</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Increased annual yield by 24% through strategic renovation and positioning.</p>
+                        </div>
+                    </div>
+                    <!-- Stories 4 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../Images/service-2.png" alt="A modern luxury villa."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Residential Sales</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">The Obsidian Villa</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Sold for $8.5M in record time using our local outreach network.</p>
+                        </div>
+                    </div>
+                    <!-- Stories 5 -->
+                    <div class="min-w-[300px] md:min-w-[450px] snap-center bg-white border border-outline-variant rounded-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="../Images/service-3.png" alt="A sleek corporate office building."/>
+                        </div>
+                        <div class="p-md">
+                            <span class="text-label-sm text-on-surface-variant mb-xs block">Commercial Leasing</span>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-xs">Lumina Headquarters</h4>
+                            <p class="text-on-surface-variant font-body-md mb-md">Negotiated a 15-year lease for a Fortune 500 tech firm in 45 days.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CTA Section -->
+             <section class="py-xl px-margin-desktop max-w-max-width mx-auto">
+                <div class="bg-surface-container-highest rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-xl border border-outline-variant/30">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline-lg text-headline-lg">Ready to secure your legacy?</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Our experts are ready to provide a bespoke strategy tailored to your real estate ambitions.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-md">
+                        <span class="bg-primary text-on-primary px-lg py-sm font-label-md rounded-lg hover:shadow-lg transition-all">Work With Us</span>
+                        <a class="bg-white text-primary border border-primary px-lg py-sm font-label-md rounded-lg hover:bg-surface-container-low transition-all" href="#">Career Opportunities</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-tertiary text-on-tertiary">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
+                    <div class="space-y-md">
+                        <div class="font-headline-md text-headline-md font-bold text-on-tertiary">Xrentals</div>
+                        <p class="text-on-tertiary/70 text-body-md">Empowering your real estate journey with trust, expertise, and premium service since 2026.</p>
+                        <div class="flex gap-md">
+                            <a class="text-on-tertiary/80 hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+                            <a class="text-on-tertiary/80 hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">group</span></a>
+                            <a class="text-on-tertiary/80 hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-secondary-fixed mb-lg">Quick Links</h4>
+                        <ul class="space-y-sm text-on-tertiary/80">
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Properties</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Cities</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">About Us</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-secondary-fixed mb-lg">Services</h4>
+                        <ul class="space-y-sm text-on-tertiary/80">
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Buy Property</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Sell Property</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Rent Property</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Property Management</a></li>
+                            <li><a class="hover:text-secondary-fixed transition-colors" href="#">Legal Support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-secondary-fixed mb-lg">Contact Info</h4>
+                        <ul class="space-y-sm text-on-tertiary/80">
+                            <li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">location_on</span> 230 KTU, Koforidua, Ghana</li>
+                            <li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">call</span> +233 (0) 12-345-6789</li>
+                            <li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">mail</span> hello@xrentals.com</li>
+                            <li class="mt-lg">
+                                <form class="flex gap-xs">
+                                    <input class="bg-white/10 border-white/20 rounded-lg px-md py-sm text-on-tertiary focus:ring-secondary-fixed focus:border-secondary-fixed w-full" placeholder="Newsletter" type="email"/>
+                                    <span class="material-symbols-outlined hover:text-secondary-fixed py-sm px-1">send</span>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-lg border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-md">
+                    <p class="text-label-sm text-on-tertiary/60">© 2026 Xrentals Group of Companies. All rights reserved.</p>
+                    <div class="flex gap-lg text-label-sm text-on-tertiary/60">
+                        <a class="hover:text-secondary-fixed hover:underline" href="#">Privacy Policy</a>
+                        <a class="hover:text-secondary-fixed hover:underline" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: 474, behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -474, behavior: 'smooth' });
+            });
+
+            // Simple parallax for hero
+            window.addEventListener('scroll', () => {
+                const scroll = window.pageYOffset;
+                const heroBg = document.querySelector('.bg-cover');
+                if (heroBg) {
+                    heroBg.style.transform = `translateY(${scroll * 0.4}px)`;
+                }
+            });
+        </script>
+    </body>
+</html>

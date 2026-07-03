@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xrentals - Sign Up</title>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="../../Assets/CSS/register.css">
+</head>
+<body>
+      <section class="container">
+      <div class="image-section">
+        <div class="image-wrapper">
+          <img src="../../assets/Images/logo.jpg" alt="House">
+        </div>
+        <div class="content-container">
+        <h1>X<span>rentals</span></h1>
+        <h1 class="section-heading">The Easiest Method To Find a <span>House</span></h1>
+        <p class="section-paragraph">Discover your dream home with zero stress. Smart search, verified listings, and expert guidance all in one place.</p>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-wrapper">
+          <div class="logo-container">
+            <a href="#" class="logo-container">
+              <img src="../../Assets/Images/house-logo.png" alt="Logo">
+            </a>
+          </div>
+          <h2>Welcome to Xrentals! 👋🏻</h2>
+          <p>Sign up to create your Xrentals account.</p>
+          <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="other-name">Other Names</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="other-name" name="other-name" placeholder="Enter your other names" optional>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+                    </div>
+                </div>
+          </form>
+          <div class="terms">
+            <div class="terms">
+              <input type="checkbox" value="terms" id="terms">
+              <label for="terms">I agree to <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+          </div>
+          <button type="submit" class="Sign-up-btn">Sign up</button>
+          <div class="or-divider">or</div>
+          <button class="link-signup">
+            <object data="../../Assets/Images/google.svg"></object>
+            <span>Sign up with Google</span>
+          </button>
+          <button class="link-signup">
+            <object data="../../Assets/Images/apple.svg"></object>
+            <span>Sign up with Apple</span>
+          </button>
+          <div class="signin-link">Already have an account? <a href="login.html">Sign In</a></div>
+          <div class="auth-back">
+                <a href=""><i class="fas fa-arrow-left"></i>  Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // SHOW OR HIDE PASSWORD
+function togglePassword(id){
+
+    const input = document.getElementById(id);
+
+    if(input.type === "password"){
+        input.type = "text";
+    }else{
+        input.type = "password";
+    }
+
+}
+
+// REGISTER FORM
+document
+.getElementById("registerForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const firstName =
+    document.getElementById("first-name").value.trim();
+
+    const lastName =
+    document.getElementById("last-name").value.trim();
+
+    const phone =
+    document.getElementById("phone").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const password =
+    document.getElementById("password").value;
+
+    const confirmPassword =
+    document.getElementById("confirm-password").value;
+
+    const errorMessage =
+    document.getElementById("errorMessage");
+
+    // CLEAR PREVIOUS ERROR
+    errorMessage.textContent = "";
+
+    // PASSWORD CHECK
+    if(password !== confirmPassword){
+
+        errorMessage.textContent =
+        "Passwords do not match.";
+
+        return;
+    }
+
+    // PASSWORD LENGTH CHECK
+    if(password.length < 6){
+
+        errorMessage.textContent =
+        "Password must be at least 6 characters.";
+
+        return;
+    }
+
+    console.log("Registration Successful");
+
+    console.log({
+        firstName,
+        lastName,
+        phone,
+        email,
+        password
+    });
+
+    window.location.href = "pages/login.html"
+
+    // FUTURE DATABASE CONNECTION
+    const formData = new FormData();
+
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("phone", phone);
+    formData.append("email", email);
+
+    const accountType =
+    document.querySelector(
+    'input[name="accountType"]:checked'
+    ).value;
+
+    formData.append("accountType", accountType);
+    formData.append("password", password);
+
+    fetch("../php/register.php",{
+        method:"POST",
+        body:formData
+    })
+    .then(res => res.text())
+    .then(data => {
+
+    if(data === "success"){
+        alert("Registration Successful");
+        window.location.href = "pages/login.html";
+    }else{
+        alert("Registration Failed");
+    }
+
+    }); 
+
+});
+    </script>
+
+</body>
+</html>
