@@ -1,0 +1,185 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.form-message {
+  min-height: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-message.error { color: #e74c3c; }
+.form-message.success { color: #2c7a4d; }
+
+.property-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1.75rem;
+  max-width: 760px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.property-form .form-group {
+  margin-bottom: 1.1rem;
+}
+
+.property-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--text-dark);
+}
+
+.property-form input,
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--bg);
+}
+
+.property-form input:focus,
+.property-form select:focus,
+.property-form textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.image-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.form-actions .dash-cta {
+  border: none;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.form-actions .dash-cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Property card grid (My Properties page) ---- */
+.property-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--primary-lighter);
+}
+
+.property-card-thumb-placeholder {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.property-card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.property-card-location {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.property-card-price {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.property-card-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.property-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.property-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--primary-lighter);
+  color: var(--primary);
+}
+
+.property-delete-btn {
+  all: unset;
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 0.85rem;
+}
+
+.property-delete-btn:hover {
+  text-decoration: underline;
+}

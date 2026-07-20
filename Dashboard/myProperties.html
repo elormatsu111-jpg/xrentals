@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xrentals - My Properties</title>
+    <link rel="stylesheet" href="../../Assets/css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/property-form.css">
+    <script>
+        window.XRENTALS_LOGIN_PAGE = '../auth/propertyOwnerLogin.html';
+        window.XRENTALS_REQUIRED_ROLE = 'owner';
+    </script>
+</head>
+<body>
+    <header class="dash-topbar">
+        <div class="dash-logo">X<span>rentals</span></div>
+        <div class="dash-user">
+            <span>Signed in as <strong data-user-firstname>...</strong></span>
+            <button class="dash-logout-btn" data-logout>Log out</button>
+        </div>
+    </header>
+
+    <main class="dash-wrapper">
+        <div class="dash-welcome">
+            <a class="back-link" href="propertyOwnerDashboard.html"><i class="fas fa-arrow-left"></i> Back to dashboard</a>
+            <h1>My Properties</h1>
+            <p>Everything you've listed on Xrentals.</p>
+            <a class="dash-cta" href="addProperty.html" style="margin-top:1rem;"><i class="fas fa-plus"></i> Add a Property</a>
+        </div>
+
+        <!-- JS fills this in — the number of properties is inherently dynamic -->
+        <div id="propertyList" class="dash-grid"></div>
+    </main>
+
+    <!-- <script src="../js/auth-guard.js"></script> -->
+    <script src="../js/my-properties.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "xrentals-main",
+  "version": "1.0.0",
+  "description": "xrentals is a web-based property rental and booking management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sign in Xrentals - Find your new place</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: '#064e3b',
+                light: '#0a6c52',
+                surface: '#f8f9ff',
+              }
+            },
+
+            fontFamily: {
+              sans: ['"Hanken Grotesk"', 'sans-serif'],
+            },
+
+            borderRadius: {
+              'marlin': '8px',
+            }
+          }
+        }
+      }
+    </script>
+    <style data-purpose="custom-styling">
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Hanken Grotesk", sans-serif;
+        background-color: #f8f9ff;
+      }
+
+      .hero-overlay {
+        background: rgba(255, 255, 255, 0.15);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .input-focus:focus {
+        border-color: #064e3b;
+        outline: 2px solid rgba(6, 78, 59, 0.35);
+        outline-offset: 2px;
+      }
+
+      .input-wrapper {
+        position: relative;
+      }
+
+      .input-wrapper i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-10 m-0 bg-brand-light">
+    <main class="flex flex-col md:flex-row w-full min-h-screen bg-brand-surface overflow-hidden">
+      <!-- Hero Section -->
+      <section class="hidden md:flex md:w-1/2 relative bg-brand overflow-hidden" data-purpose="left-hero-image">
+        <img alt="Luxury Architectural Home" class="absolute inset-0 w-full h-full object-cover opacity-80" src="../Assets/Images/login-0.png"/>
+        <!-- Content Overlay -->
+        <div class="relative z-10 w-full h-full flex items-center justify-center p-12">
+          <div class="hero-overlay p-10 rounded-marlin max-w-md text-white shadow-2xl" data-purpose="overlay-card">
+            <div class="flex items-center gap-2 mb-8">
+              <img class="w-8 h-8 text-white" src="../Assets/Images/house-logo.png" alt="Xrentals Logo" aria-hidden="true"/>
+              <span class="text-2xl font-bold tracking-tight">Xrentals Group Of Companies</span>
+            </div>
+            <h1 class="text-4xl font-extrabold leading-tight mb-6">The Easiest Method To Find a House</h1>
+            <p class="text-lg opacity-90 leading-relaxed">Discover your dream home with zero stress. Smart search, verified listings, and expert guidance all in one place.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Login Section -->
+      <section class="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-20 lg:p-32" data-purpose="right-login-form">
+        <!-- Top Icon -->
+        <div class="mb-8 w-full flex justify-start md:justify-start">
+          <div class="bg-brand/10 p-3 rounded-lg">
+            <img class="w-8 h-8 text-white" src="../Assets/Images/house-logo.png" alt="Xrentals Logo" aria-hidden="true"/>
+          </div>
+        </div>
+        <div class="w-full max-w-md">
+          <h2 class="text-3xl font-bold text-slate-900 mb-2">Welcome Back! 👋</h2>
+          <p class="text-slate-500 mb-10">Sign in to access your Xrentals account.</p>
+          <!-- Login Form -->
+          <form action="#" class="space-y-6" method="POST">
+            <!-- Email Field -->
+            <div data-purpose="form-group">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="email">Email Address</label>
+              <input class="w-full px-4 py-3 rounded-marlin border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-all bg-white" id="email" name="email" placeholder="your@email.com" required="" type="email"/>
+            </div>
+            <!-- Password Field -->
+            <div class="form-group">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="password">Password</label>
+              <div class="input-wrapper">
+                <input class="w-full px-4 py-3 rounded-marlin border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-all bg-white" type="password" id="password" name="password" placeholder="Enter your password" required/>
+                <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+              </div>
+            </div>
+            <!-- Options -->
+            <div class="flex items-center justify-between text-sm">
+              <label class="flex items-center cursor-pointer">
+                <input class="w-4 h-4 rounded text-brand focus:ring-brand border-slate-300" type="checkbox"/>
+                <span class="ml-2 text-slate-600">Remember me on this device</span>
+              </label>
+              <a class="text-brand font-semibold hover:underline" href="#">Forgot password?</a>
+            </div>
+            <button class="w-full bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-marlin transition-colors shadow-lg shadow-brand/20" type="submit">Sign In</button>
+          </form>
+          <!-- Divider -->
+          <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-4 bg-brand-surface text-slate-400">or</span>
+            </div>
+          </div>
+          <!-- Social Logins -->
+          <div class="space-y-4">
+            <button class="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-marlin border border-slate-200 bg-white hover:bg-brand hover:text-white transition-colors font-semibold text-slate-700">
+            <img alt="Google Logo" class="w-5 h-5" src="../Assets/Images/google.svg"/>Sign in with Google</button>
+            <button class="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-marlin border border-slate-200 bg-white hover:bg-brand hover:text-white transition-colors font-semibold text-slate-700">
+            <img alt="Apple Logo" class="w-5 h-5" src="../Assets/Images/apple.svg"/>Sign in with Apple</button>
+          </div>
+          <p class="mt-10 text-center text-sm text-slate-600">Don't have an account? <a class="text-brand font-bold hover:underline" href="../auth/xrentals_signup_page.html">Sign Up</a></p>
+          <!-- Back to Home -->
+          <div class="mt-8 flex justify-center">
+            <a class="flex items-center gap-2 text-slate-500 hover:text-brand transition-colors text-sm font-medium hover:underline" href="../src/index.html">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Back to Home
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.querySelector('.toggle-password');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+        } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.remove('fa-eye-slash');
+          toggleIcon.classList.add('fa-eye');
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --text-dark: hsl(240, 54%, 15%);
+  --text-light: hsl(242, 18%, 64%);
+  --primary: hsl(222, 98%, 60%);
+  --primary-lighter: hsl(240, 33%, 86%);
+  --primary-gradient: linear-gradient(to right, #3671fd, #6f31ff);
+  --surface: #ffffff;
+  --bg: #f5f9ff;
+  --border: hsl(240, 20%, 90%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+/* ---- Top bar ---- */
+.dash-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.dash-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.dash-logo span {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.dash-logout-btn {
+  all: unset;
+  cursor: pointer;
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.dash-logout-btn:hover {
+  opacity: 0.85;
+}
+
+.dash-logout-btn:active {
+  transform: translateY(1px);
+}
+
+/* ---- Layout ---- */
+.dash-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dash-welcome {
+  margin-bottom: 2rem;
+}
+
+.dash-welcome h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.dash-welcome p {
+  color: var(--text-light);
+}
+
+/* ---- Hero section (Dashboard header) ---- */
+.dash-hero {
+  background: linear-gradient(180deg, rgba(54, 113, 253, 0.10), rgba(111, 49, 255, 0.06));
+  border: 1px solid rgba(54, 113, 253, 0.18);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dash-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dash-hero-kicker {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.dash-hero-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.dash-hero-sub {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dash-hero-btn {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.7rem;
+  background: var(--primary-gradient);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 22px rgba(54, 113, 253, 0.18);
+  transition: transform 0.12s, box-shadow 0.12s, opacity 0.12s;
+  white-space: nowrap;
+}
+
+.dash-hero-btn:hover {
+  box-shadow: 0 14px 26px rgba(54, 113, 253, 0.22);
+  opacity: 0.98;
+}
+
+.dash-hero-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 720px) {
+  .dash-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.dash-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(11, 28, 48, 0.03);
+}
+
+.dash-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dash-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dash-card .dash-stat {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0.25rem 0;
+}
+
+/* .dash-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  margin-top: 0.75rem;
+} */
+
+.dash-cta {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  background: var(--primary-gradient);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: opacity 0.15s, transform 0.12s;
+  box-shadow: 0 10px 22px rgba(54, 113, 253, 0.18);
+}
+
+.dash-cta:hover {
+  opacity: 0.95;
+}
+
+.dash-cta:active {
+  transform: translateY(1px);
+}
+
+.dash-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.form-message {
+  min-height: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-message.error {
+  color: #e74c3c;
+}
+.form-message.success {
+  color: #2c7a4d;
+}
+
+.form-message.info {
+  color: #2a6fdb;
+}
+
+/* ---- Property form ---- */
+.property-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1.75rem;
+  max-width: 760px;
+  box-shadow: 0 12px 28px rgba(11, 28, 48, 0.03);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.property-form .form-group {
+  margin-bottom: 1.1rem;
+}
+
+.property-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--text-dark);
+}
+
+.property-form input,
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--bg);
+}
+
+.property-form input:focus,
+.property-form select:focus,
+.property-form textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.image-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.form-actions .dash-cta {
+  border: none;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.form-actions .dash-cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Property card grid (My Properties page) ---- */
+.property-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.property-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(11, 28, 48, 0.06);
+}
+
+.property-card-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--primary-lighter);
+}
+
+.property-card-thumb-placeholder {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.property-card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.property-card-location {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.property-card-price {
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.property-card-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.property-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.property-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--primary-lighter);
+  color: var(--primary);
+}
+
+.property-delete-btn {
+  all: unset;
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.property-delete-btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 880px) {
+  .dash-wrapper {
+    padding: 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+

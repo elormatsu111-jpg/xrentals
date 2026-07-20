@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xrentals - My Dashboard</title>
+    <link rel="stylesheet" href="../../Assets/css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script>
+        window.XRENTALS_LOGIN_PAGE = '../auth/clientLogin.html';
+        window.XRENTALS_REQUIRED_ROLE = 'client';
+    </script>
+</head>
+
+<body>
+    <header class="dash-topbar">
+        <div class="dash-logo">X<span>rentals</span></div>
+        <div class="dash-user">
+            <span>Signed in as <strong data-user-firstname>...</strong></span>
+            <button class="dash-logout-btn" data-logout>Log out</button>
+        </div>
+    </header>
+
+    <main class="dash-wrapper">
+        <div class="dash-welcome">
+            <h1>Welcome back, <span data-user-firstname>...</span> 👋</h1>
+            <p>Here’s what’s happening with your Xrentals account.</p>
+        </div>
+
+        <section class="dash-hero">
+            <div class="dash-hero-inner">
+                <div class="dash-hero-left">
+                    <div class="dash-hero-kicker">Quick actions</div>
+                    <div class="dash-hero-title">Find the right property faster</div>
+                    <div class="dash-hero-sub">Browse verified listings, save favorites, and message owners when ready.</div>
+                </div>
+                <div class="dash-hero-right">
+                    <a class="dash-hero-btn" href="../../index.html">
+                        <i class="fas fa-search"></i>
+                        Browse properties
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="dash-grid">
+            <div class="dash-card">
+                <h3><i class="fas fa-search"></i> Browse Properties</h3>
+                <p>Explore verified listings across Ghana.</p>
+                <a class="dash-cta" href="../../index.html">Browse now</a>
+            </div>
+
+            <div class="dash-card">
+                <h3><i class="fas fa-heart"></i> Saved Favorites</h3>
+                <p class="dash-stat">0</p>
+                <p>Properties you've bookmarked will show up here.</p>
+                <!-- <span class="dash-badge">Coming soon</span> -->
+            </div>
+
+            <div class="dash-card">
+                <h3><i class="fas fa-envelope"></i> My Inquiries</h3>
+                <p class="dash-stat">0</p>
+                <p>Messages you've sent to property owners or agents.</p>
+                <!-- <span class="dash-badge">Coming soon</span> -->
+            </div>
+
+            <div class="dash-card">
+                <h3><i class="fas fa-user"></i> Account</h3>
+                <p>Email: <strong data-user-email>...</strong></p>
+                <p>Account type: Client</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="../js/auth-guard.js"></script> -->
+        </body>
+</html>

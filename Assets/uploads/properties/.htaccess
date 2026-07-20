@@ -1,0 +1,6 @@
+# Defense in depth: even if a malicious file somehow got uploaded here,
+# Apache will refuse to execute it as PHP.
+<FilesMatch "\.(php|phtml|php\d)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
